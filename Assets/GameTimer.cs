@@ -10,7 +10,7 @@ public class GameTimer : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // 씬 넘어가도 유지
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -20,12 +20,12 @@ public class GameTimer : MonoBehaviour
 
     void Start()
     {
-        startTime = Time.time; // 루프 시작 시간 기록
+        startTime = Time.time;
     }
 
     public void RestartTimer()
     {
-        startTime = Time.time; // 루프 재시작 시 호출
+        startTime = Time.time;
     }
     public float ElapsedTime => Time.time - startTime;
 }
